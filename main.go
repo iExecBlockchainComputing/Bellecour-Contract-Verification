@@ -134,7 +134,7 @@ func QuerySmartContractVerify(smartContractAddress string) {
 
 	client := &http.Client{}
 
-	url := "https://blockscout.bellecour.iex.ec/api?module=contract&action=getsourcecode&address="
+	url := "https://blockscout-v5.bellecour.iex.ec/api?module=contract&action=getsourcecode&address="
 
 	fmt.Println(url + smartContractAddress)
 
@@ -181,7 +181,7 @@ func QuerySmartContractVerify(smartContractAddress string) {
 }
 func verifiedSmartContractNewBlockscout(smartContractAddress string, nonStandardJSON BeforeV2) {
 
-	url := "https://blockscout-v6.bellecour.iex.ec/api/v2/smart-contracts/"
+	url := "https://blockscout.bellecour.iex.ec/api/v2/smart-contracts/"
 	verification := "/verification/via/standard-input"
 
 	// Create the multipart/form-data request
@@ -265,7 +265,7 @@ func verifiedSmartContractNewBlockscout(smartContractAddress string, nonStandard
 
 	// Print the response
 	if resp.StatusCode == 200 {
-		fmt.Printf("Check : https://blockscout-v6.bellecour.iex.ec/api/v2/smart-contracts/%s\n", smartContractAddress)
+		fmt.Printf("Check : https://blockscout.bellecour.iex.ec/api/v2/smart-contracts/%s\n", smartContractAddress)
 		fmt.Println("Response Status:", resp.Status)
 		fmt.Println("Response Body:", string(respBody))
 	} else {
@@ -398,7 +398,7 @@ func extractContractAddress(itemsStringValue string) string {
 func verifyIfSmartContractIsVerifed(smartContractAddress string) bool {
 	client := &http.Client{}
 
-	url := "https://blockscout-v6.bellecour.iex.ec/api/v2/smart-contracts/"
+	url := "https://blockscout.bellecour.iex.ec/api/v2/smart-contracts/"
 
 	// fmt.Println(url + smartContractAddress)
 

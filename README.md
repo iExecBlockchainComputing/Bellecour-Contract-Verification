@@ -81,9 +81,9 @@ The verified contracts will be available on Bellecour BlockScout V6 with a direc
 This tool uses a few key API endpoints:
 
 	•	BlockScout V5: To query the verified contracts.
-	•	Endpoint: https://blockscout.bellecour.iex.ec/api
+	•	Endpoint: https://blockscout-v5.bellecour.iex.ec/api
 	•	BlockScout V6: To verify contracts.
-	•	Endpoint: https://blockscout-v6.bellecour.iex.ec/api/v2/smart-contracts/
+	•	Endpoint: https://blockscout.bellecour.iex.ec/api/v2/smart-contracts/
 
 Ensure you replace the url variable in QuerySmartContractVerify() with the correct endpoint if you’re using a different network or explorer instance.
 
